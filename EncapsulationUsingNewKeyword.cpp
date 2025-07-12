@@ -42,7 +42,7 @@ int main(){
     string myname = ptr->name; // Copies the name property into a string variable myname.
     cout<<myname<<endl; 
 
-    ptr->age = 26;
+    ptr->age = 25;
     ptr->dept = "Computer Science"; 
     ptr->subject = "C++"; 
     // Throw Error as it is declared as private
