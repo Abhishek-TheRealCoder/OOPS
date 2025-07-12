@@ -34,5 +34,6 @@ int main(){
     ptr->subject = "DSA";
     ptr->salary = 90000;
     ptr->TeacherInfo();
+    delete ptr;
     return 0;
 }
