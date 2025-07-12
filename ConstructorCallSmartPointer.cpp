@@ -24,9 +24,16 @@ class Student{
         }
 };
 int main(){
-    shared_ptr<Student>ptr = make_shared<Student>("Abhishek Singh",23,"Computer Science" );
-    ptr->name = "Yashaswini";
-    ptr->age = 23;
-    ptr->subject_stream = "ECE";
+    shared_ptr<Student>ptr = make_shared<Student>("Abhishek",23,"Computer-Science");
     ptr->info();
+    return 0;
 }
+
+//     Stack Memory:                                Heap Memory:
+// +---------------------+              +---------------------------------------------+
+// | ptr (shared_ptr)    | ---------->  | Student object                             |
+// +---------------------+              |---------------------------------------------|
+//                                      | name           = "Abhishek Singh"          |
+//                                      | age            = 23                        |
+//                                      | subject_stream = "Computer Science"        |
+//                                      +---------------------------------------------+
