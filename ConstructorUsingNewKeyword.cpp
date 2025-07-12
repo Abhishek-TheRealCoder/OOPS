@@ -24,12 +24,13 @@ class Student{
         }
 };
 int main(){
-    Student* ptr = new Student("Abhishek Singh",23,"Computer Science");
+    Student* ptr = new Student("Abhishek",23,"Computer-Science");
     ptr->info();
+    delete ptr;
     return 0;
 }
 
-// Stack Memory:                        Heap Memory:
+//      Stack Memory:                                Heap Memory:
 // +---------------------+              +---------------------------------------------+
 // | ptr (shared_ptr)    | ---------->  | Student object                             |
 // +---------------------+              |---------------------------------------------|
