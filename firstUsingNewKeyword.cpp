@@ -16,6 +16,7 @@ class Teacher{
     void changeDept(string newDept){
         dept = newDept;
     }
+
     void TeacherInfo(){
         cout<<"name : "<<name<<endl;
         cout<<"age : "<<age<<endl;
@@ -27,7 +28,7 @@ class Teacher{
 };
 
 int main(){
-    Teacher*ptr = new Teacher();
+    Teacher*ptr = new Teacher(); // object created in heap memory
     ptr->name = "Vedant";
     ptr->age = 26;
     ptr->dept = "Computer Science";
@@ -37,3 +38,24 @@ int main(){
     delete ptr;
     return 0;
 }
+
+
+// +-------------------+         +---------------------+
+// |  ptr (Abhishek)   | ----->  |   Teacher object    |
+// |shared_ptr<Teacher>|         |   (on Heap)        |
+// +-------------------+         +---------------------+ 
+    // stack memory                  //Heap memory   
+                           
+
+                    //    |
+                    //    |
+                                              
+// +-------------------+         +---------------------------------------------+
+// |   ptr (Abhishek)  | ----->  |   Teacher object (on Heap)                  |
+// | shared_ptr<Teacher>|        |---------------------------------------------|
+// +-------------------+         | name    = "Vedant"                          |
+//                               | age     = 26                                |
+//                               | dept    = "Computer Science"                |
+//                               | subject = "DBMS"                            |
+//                               | salary  = 800000                            |
+//                               +---------------------------------------------+
