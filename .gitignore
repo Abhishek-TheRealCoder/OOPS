@@ -1,0 +1,9 @@
+# Object files
+*.o
+*.exe
+
+# IDE files
+.vscode/
+
+# Secrets
+.env
